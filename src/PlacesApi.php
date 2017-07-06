@@ -1,8 +1,8 @@
 <?php
-namespace SKAgarwal\GoogleApi;
+namespace jjsquady\GoogleApi;
 
 use GuzzleHttp\Client;
-use SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException;
+use jjsquady\GoogleApi\Exceptions\GooglePlacesApiException;
 
 class PlacesApi
 {
@@ -57,7 +57,7 @@ class PlacesApi
      * @param array $params
      *
      * @return \Illuminate\Support\Collection
-     * @throws \SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException
+     * @throws \jjsquady\GoogleApi\Exceptions\GooglePlacesApiException
      */
     public function nearbySearch($location, $radius = null, $params = [])
     {
@@ -76,7 +76,7 @@ class PlacesApi
      * @param array $params
      *
      * @return \Illuminate\Support\Collection
-     * @throws \SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException
+     * @throws \jjsquady\GoogleApi\Exceptions\GooglePlacesApiException
      */
     public function textSearch($query, $params = [])
     {
@@ -97,7 +97,7 @@ class PlacesApi
      * @param $params
      *
      * @return \Illuminate\Support\Collection
-     * @throws \SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException
+     * @throws \jjsquady\GoogleApi\Exceptions\GooglePlacesApiException
      */
     public function radarSearch($location, $radius, array $params)
     {
@@ -117,7 +117,7 @@ class PlacesApi
      * @param array $params
      *
      * @return \Illuminate\Support\Collection
-     * @throws \SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException
+     * @throws \jjsquady\GoogleApi\Exceptions\GooglePlacesApiException
      */
     public function placeDetails($placeId, $params = [])
     {
@@ -156,7 +156,7 @@ class PlacesApi
      * @param array $params
      *
      * @return \Illuminate\Support\Collection
-     * @throws \SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException
+     * @throws \jjsquady\GoogleApi\Exceptions\GooglePlacesApiException
      */
     public function queryAutocomplete($input, $params = [])
     {
@@ -192,7 +192,7 @@ class PlacesApi
      * @param $method
      *
      * @return mixed|string
-     * @throws \SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException
+     * @throws \jjsquady\GoogleApi\Exceptions\GooglePlacesApiException
      */
     private function makeRequest($uri, $params, $method = 'get')
     {
@@ -272,7 +272,7 @@ class PlacesApi
     }
 
     /**
-     * @throws \SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException
+     * @throws \jjsquady\GoogleApi\Exceptions\GooglePlacesApiException
      */
     private function checkKey()
     {
@@ -288,7 +288,7 @@ class PlacesApi
      * @param $radius
      * @param $params
      *
-     * @throws \SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException
+     * @throws \jjsquady\GoogleApi\Exceptions\GooglePlacesApiException
      */
     private function prepareNearbySearchParams($location, $radius, $params)
     {
@@ -317,7 +317,7 @@ class PlacesApi
      * @param $params
      *
      * @return mixed
-     * @throws \SKAgarwal\GoogleApi\Exceptions\GooglePlacesApiException
+     * @throws \jjsquady\GoogleApi\Exceptions\GooglePlacesApiException
      */
     private function prepareRadarSearchParams($location, $radius, $params)
     {

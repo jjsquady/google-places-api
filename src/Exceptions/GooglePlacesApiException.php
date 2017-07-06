@@ -1,5 +1,5 @@
 <?php
-namespace SKAgarwal\GoogleApi\Exceptions;
+namespace jjsquady\GoogleApi\Exceptions;
 
 class GooglePlacesApiException extends \Exception
 {
